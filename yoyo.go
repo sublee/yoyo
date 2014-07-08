@@ -29,7 +29,7 @@ func WebServer() *gin.Engine {
 		query := c.Req.URL.Query()
 		username := query["username"][0]
 		form := url.Values{"api_token": {*yoAPIToken}, "username": {username}}
-		http.PostForm("http://api.justyo.co/yo", form)
+		http.PostForm("http://api.justyo.co/yo/", form)
 	})
 	return www
 }
